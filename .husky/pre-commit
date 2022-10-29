@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn run lint
+echo ------[Husky] pre-commit------
 yarn run format
+echo ------[Husky] end------
