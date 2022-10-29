@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo ------[Husky] pre-commit------
-yarn run format
-echo ------[Husky] end------
+echo ------------------------------ [husky] pre-commit ------------------------------
+npm run format
+echo ------------------------------ [husky] end ------------------------------

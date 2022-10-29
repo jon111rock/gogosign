@@ -10,11 +10,11 @@
 		"lint:check": "eslint --ext=js,jsx src/",
 		"lint": "eslint --fix --ext=js,jsx src/",
 		"format:check": "prettier . --check --ignore-unknown",
-		"format": "prettier . --write --ignore-unknown"
+		"format": "prettier . --write --ignore-unknown",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"eslint-plugin-prettier": "^4.2.1",
-		"husky": "^8.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
@@ -30,7 +30,8 @@
 		"eslint-plugin-promise": "^6.0.0",
 		"eslint-plugin-react": "^7.31.10",
 		"prettier": "2.7.1",
-		"vite": "^3.2.0"
+		"vite": "^3.2.0",
+		"husky": "^8.0.0"
 	},
 	"main": "main.jsx",
 	"license": "MIT"
