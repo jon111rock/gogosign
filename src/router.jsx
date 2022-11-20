@@ -1,5 +1,5 @@
 import App from './App';
-import Manager from './pages/Manager';
+import Manage from './pages/Manage/Manage';
 
 export default {
 	routes: [
@@ -8,8 +8,8 @@ export default {
 			element: <App />,
 		},
 		{
-			path: '/manager',
-			element: <Manager />,
+			path: '/manage',
+			element: <Manage />,
 		},
 	],
 };
