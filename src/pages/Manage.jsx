@@ -1,6 +1,10 @@
 import logoImage from '@/assets/gogosign-logo.png';
-import listIcon from '@/assets/list-icon.svg';
-import blockListIcon from '@/assets/block-list-icon.svg';
+import listIcon from '@/assets/icons/list-icon.svg';
+import blockListIcon from '@/assets/icons/block-list-icon.svg';
+import downloadIcon from '@/assets/icons/download-icon.svg';
+import shareIcon from '@/assets/icons/share-icon.svg';
+import editIcon from '@/assets/icons/edit-icon.svg';
+import crossIcon from '@/assets/icons/cross-icon.svg';
 
 const Manage = () => {
 	return (
@@ -29,7 +33,12 @@ const Manage = () => {
 								<span className='mr-14'>2022/11/11 23:15:21</span>
 								<span>100KB</span>
 							</div>
-							<div>logo</div>
+							<div className='flex items-center gap-2'>
+								<img src={downloadIcon} className='h-6' />
+								<img src={shareIcon} className='h-6' />
+								<img src={editIcon} className='h-6' />
+								<img src={crossIcon} className='h-4' />
+							</div>
 						</div>
 					</div>
 				</div>
