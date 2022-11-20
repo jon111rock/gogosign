@@ -46,7 +46,7 @@ const Icon = ({ type, size = '1', color = 'black' }) => {
 	}, [type]);
 	return (
 		<>
-			<img src={icon} className={`h-${size} text-${color}`} />
+			<img src={icon} className={`h-${size} text-${color} cursor-pointer`} />
 		</>
 	);
 };
