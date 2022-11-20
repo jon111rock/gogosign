@@ -21,7 +21,18 @@ const Manage = () => {
 				</div>
 				<hr />
 				{/* files list */}
-				<div></div>
+				<div className='flex flex-col gap-5 mt-10'>
+					<div className='flex flex-col gap-7 p-5 rounded-xl  bg-white shadow-md'>
+						<span>文件01</span>
+						<div className='flex justify-between'>
+							<div>
+								<span className='mr-14'>2022/11/11 23:15:21</span>
+								<span>100KB</span>
+							</div>
+							<div>logo</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
