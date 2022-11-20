@@ -12,10 +12,16 @@ const Manage = () => {
 				</div>
 				{/* control panel */}
 				<div className='flex items-center justify-between mt-10 pb-5'>
-					<input className='p-3 w-64 rounded-xl outline-0 text-sm' placeholder='Search'></input>
-					<div className='flex gap-2 items-center'>
-						<Icon type='list' />
-						<Icon type='block-list' />
+					<div className='flex'>
+						<div className='mr-8 btn-manage-mode-select active-light-black'>文件</div>
+						<div className='px-14 btn-manage-mode-select'>簽名</div>
+					</div>
+					<div className='flex gap-20'>
+						<input className='p-3 w-64 rounded-xl outline-0 text-sm' placeholder='Search'></input>
+						<div className='flex gap-2 items-center'>
+							<Icon type='list' />
+							<Icon type='block-list' />
+						</div>
 					</div>
 				</div>
 				<hr />
