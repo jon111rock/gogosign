@@ -1,5 +1,5 @@
 import App from './App';
-import Manage from './pages/Manage';
+import Manage from './pages/Manage/Manage';
 
 export default {
 	routes: [
