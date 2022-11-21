@@ -24,7 +24,7 @@ const ManageFileCard = ({ item = {} }) => {
 ManageFileCard.propTypes = {
 	item: PropTypes.shape({
 		name: PropTypes.string.isRequired,
-		creatAt: PropTypes.string.isRequired,
+		createAt: PropTypes.string.isRequired,
 		fileSize: PropTypes.string.isRequired,
 	}).isRequired,
 };

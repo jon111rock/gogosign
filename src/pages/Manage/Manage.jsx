@@ -1,5 +1,6 @@
 import ManageFileCard from '@/components/ManageFileCard';
 import Icon from '@/components/Icon';
+
 import logoImage from '@/assets/gogosign-logo.png';
 
 const Manage = () => {
