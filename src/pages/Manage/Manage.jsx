@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import ManageFileCard from '@/components/ManageFileCard';
 import Icon from '@/components/Icon';
 
+import signedFiles from '@/mocks/signedFiles'; // mock data
 import logoImage from '@/assets/gogosign-logo.png';
 
 const Manage = () => {
+	const [items] = useState(signedFiles.data);
+
 	return (
 		<div className='h-screen bg-gogosign-light-yellow'>
 			<div className='pt-8 w-3/4 m-auto'>
@@ -29,7 +33,11 @@ const Manage = () => {
 				<hr />
 				{/* files list */}
 				<div className='flex flex-col gap-5 mt-10'>
-					<ManageFileCard></ManageFileCard>
+					{
+						items.map(item => (
+							<ManageFileCard key={item.id} item={item}></ManageFileCard>
+						))
+					}
 				</div>
 			</div>
 		</div>

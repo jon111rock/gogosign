@@ -7,7 +7,7 @@ const ManageFileCard = ({ item = {} }) => {
 			<span>{item.name}</span>
 			<div className='flex justify-between'>
 				<div>
-					<span className='mr-14'>{item.creatAt}</span>
+					<span className='mr-14'>{item.createAt}</span>
 					<span>{item.fileSize}</span>
 				</div>
 				<div className='flex items-center gap-2'>
