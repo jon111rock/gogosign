@@ -11,7 +11,7 @@ const Manage = () => {
 	const [manageMode, setManageMode] = useState('file');
 
 	const handleManageModeClick = (event) => {
-		setManageMode(event)
+		setManageMode(event);
 	};
 
 	return (
@@ -48,20 +48,27 @@ const Manage = () => {
 							簽名
 						</div>
 					</div>
+					{/* List / Block */}
 					<div className='flex gap-20'>
 						<input className='p-3 w-64 rounded-xl outline-0 text-sm' placeholder='Search'></input>
-						<div className='flex gap-2 items-center'>
-							<Icon type='list' />
-							<Icon type='block-list' />
-						</div>
+						{manageMode == 'file' ? (
+							<div className='flex gap-2 items-center'>
+								<Icon type='list' />
+								<Icon type='block-list' />
+							</div>
+						) : (
+							<></>
+						)}
 					</div>
 				</div>
 				<hr />
 				{/* files list */}
 				<div className='flex flex-col gap-5 mt-10'>
-					{items.map((item) => (
-						<ManageFileCard key={item.id} item={item}></ManageFileCard>
-					))}
+					{manageMode == 'file' ? (
+						items.map((item) => <ManageFileCard key={item.id} item={item}></ManageFileCard>)
+					) : (
+						<></>
+					)}
 				</div>
 			</div>
 		</div>
