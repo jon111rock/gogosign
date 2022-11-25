@@ -12,7 +12,9 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "react/prop-types": "off"
+
   },
   "settings": {
     "react": {

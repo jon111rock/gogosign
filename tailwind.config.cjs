@@ -6,6 +6,7 @@ module.exports = {
 		colors: {
 			'gogosign-light-yellow': '#FDF5DD',
 			white: '#FFFFFF',
+			'gogosign-light-black': '#757267',
 		},
 	},
 	plugins: [],
