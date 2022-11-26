@@ -1,0 +1,8 @@
+node_modules
+tailwind.config.cjs
+postcss.config.cjs
+.prettierignore
+.prettierrc
+package.json
+package-lock.json
+vite.config.js
