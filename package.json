@@ -1,44 +1,43 @@
 {
-	"name": "react-vite-project",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint:check": "eslint --ext=js,jsx src/",
-		"lint": "eslint --fix --ext=js,jsx src/",
-		"format:check": "prettier . --check --ignore-unknown",
-		"format": "prettier . --write --ignore-unknown",
-		"prepare": "husky install"
-	},
-	"dependencies": {
-		"eslint-plugin-prettier": "^4.2.1",
-		"prop-types": "^15.8.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-router-dom": "^6.4.3",
-		"typescript": "^4.9.3"
-	},
-	"devDependencies": {
-		"@types/react": "^18.0.22",
-		"@types/react-dom": "^18.0.7",
-		"@vitejs/plugin-react": "^2.2.0",
-		"autoprefixer": "^10.4.13",
-		"eslint": "^8.0.1",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-config-standard": "^17.0.0",
-		"eslint-plugin-import": "^2.25.2",
-		"eslint-plugin-n": "^15.0.0",
-		"eslint-plugin-promise": "^6.0.0",
-		"eslint-plugin-react": "^7.31.10",
-		"husky": "^8.0.0",
-		"postcss": "^8.4.19",
-		"prettier": "2.7.1",
-		"tailwindcss": "^3.2.4",
-		"vite": "^3.2.0"
-	},
-	"main": "main.jsx",
-	"license": "MIT"
+  "name": "react-vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "eslint-plugin-prettier": "^4.2.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.11",
+    "husky": "^8.0.0",
+    "postcss": "^8.4.19",
+    "prettier": "^2.8.0",
+    "tailwindcss": "^3.2.4",
+    "vite": "^3.2.0"
+  },
+  "main": "main.jsx",
+  "license": "MIT"
 }
