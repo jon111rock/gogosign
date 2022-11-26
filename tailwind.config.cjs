@@ -18,12 +18,12 @@ module.exports = {
 				'gray-400': '#A6A6A6',
 				'gray-500': '#757575',
 				'gray-600': '#757267',
-				'gray-600': '#6C757D',
+				'gray-700': '#6C757D',
 				'gray-800': '#54595E',
 				'black-500': '#231B00'
-			},
+			}
 		},
-		colors: {},
+		colors: {}
 	},
-	plugins: [],
-};
+	plugins: []
+}

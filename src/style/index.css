@@ -12,6 +12,6 @@
   }
 
   .active-light-black {
-    @apply bg-gogosign-light-black text-white;
+    @apply bg-black-500 text-white;
   }
 }
