@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-	.btn-manage-mode-select {
-		@apply px-14 py-2 rounded-xl cursor-pointer;
-	}
+  .btn-manage-mode-select {
+    @apply px-14 py-2 rounded-xl cursor-pointer;
+  }
 
-	.btn-manage-mode-select {
-		@apply px-14 py-2 rounded-xl;
-	}
+  .btn-manage-mode-select {
+    @apply px-14 py-2 rounded-xl;
+  }
 
-	.active-light-black {
-		@apply bg-gogosign-light-black text-white;
-	}
+  .active-light-black {
+    @apply bg-gogosign-light-black text-white;
+  }
 }
