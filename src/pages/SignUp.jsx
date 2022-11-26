@@ -11,12 +11,8 @@ const SignUp = () => {
             <img src={logoImage} className="w-1/2" />
           </a>
           <div className="flex justify-center mt-7 mb-7">
-            <button className="w-28 p-2 border-b-2 border-black-500">
-              REGISTER
-            </button>
-            <button className="w-28 p-2 border-b-2 border-gray-300 text-gray-300">
-              LOGIN
-            </button>
+            <a href="/signup" className="w-28 p-2 text-center border-b-2 border-black-500">REGISTER</a>
+            <a href="/login" className="w-28 p-2 text-center border-b-2 border-gray-300 text-gray-300">LOGIN</a>
           </div>
           <div className="w-full">
             <input
