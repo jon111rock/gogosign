@@ -1,0 +1,8 @@
+node_modules
+.prettierrc
+index.html
+package-lock.json
+package.json
+postcss.config.cjs
+README.md
+tailwind.config
