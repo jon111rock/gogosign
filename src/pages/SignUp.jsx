@@ -11,8 +11,12 @@ const SignUp = () => {
             <img src={logoImage} className="w-1/2" />
           </a>
           <div className="flex justify-center mt-7 mb-7">
-            <button className="w-28 p-2 border-b-2 border-black-500">REGISTER</button>
-            <button className="w-28 p-2 border-b-2 border-gray-300 text-gray-300">LOGIN</button>
+            <button className="w-28 p-2 border-b-2 border-black-500">
+              REGISTER
+            </button>
+            <button className="w-28 p-2 border-b-2 border-gray-300 text-gray-300">
+              LOGIN
+            </button>
           </div>
           <div className="w-full">
             <input
@@ -32,8 +36,7 @@ const SignUp = () => {
             />
             <button
               type="submit"
-              className="w-full p-3 bg-yellow-200 text-black-500 rounded-3xl hover:bg-yellow-400"
-            >
+              className="w-full p-3 bg-yellow-200 text-black-500 rounded-3xl hover:bg-yellow-400">
               SIGN UP
             </button>
           </div>

@@ -27,31 +27,32 @@ const Manage = () => {
           <div className="flex">
             <div
               className={`mr-8 btn-manage-mode-select ${
-                manageMode == 'file' ? 'active-light-black' : ''
+                manageMode === 'file' ? 'active-light-black' : ''
               }
 							transition duration-300`}
               onClick={() => {
                 handleManageModeClick('file')
-              }}
-            >
+              }}>
               文件
             </div>
             <div
               className={`px-14 btn-manage-mode-select  ${
-                manageMode == 'sign' ? 'active-light-black' : ''
+                manageMode === 'sign' ? 'active-light-black' : ''
               }
 							transition duration-300`}
               onClick={() => {
                 handleManageModeClick('sign')
-              }}
-            >
+              }}>
               簽名
             </div>
           </div>
           {/* List / Block */}
           <div className="flex gap-20">
-            <input className="p-3 w-64 rounded-xl outline-0 text-sm" placeholder="Search"></input>
-            {manageMode == 'file' ? (
+            <input
+              className="p-3 w-64 rounded-xl outline-0 text-sm"
+              placeholder="Search"
+            />
+            {manageMode === 'file' ? (
               <div className="flex gap-2 items-center">
                 <Icon type="list" />
                 <Icon type="block-list" />
@@ -64,8 +65,8 @@ const Manage = () => {
         <hr />
         {/* files list */}
         <div className="flex flex-col gap-5 mt-10">
-          {manageMode == 'file' ? (
-            items.map((item) => <ManageFileCard key={item.id} item={item}></ManageFileCard>)
+          {manageMode === 'file' ? (
+            items.map((item) => <ManageFileCard key={item.id} item={item} />)
           ) : (
             <></>
           )}

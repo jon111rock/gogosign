@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:prettier/recommended", "standard", "standard-jsx", "standard-react"],
+  "extends": ["standard", "standard-jsx", "standard-react", "prettier-standard"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
