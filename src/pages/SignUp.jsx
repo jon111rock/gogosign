@@ -36,7 +36,8 @@ const SignUp = () => {
             />
             <button
               type="submit"
-              className="w-full p-3 bg-yellow-200 text-black-500 rounded-3xl hover:bg-yellow-400">
+              className="w-full p-3 bg-yellow-200 text-black-500 rounded-3xl hover:bg-yellow-400"
+            >
               SIGN UP
             </button>
           </div>

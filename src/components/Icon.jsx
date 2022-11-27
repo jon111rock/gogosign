@@ -45,7 +45,7 @@ const Icon = ({ type, size = '1', color = 'black' }) => {
   useEffect(() => {
     setIcon(
       icons.find((item) => {
-        return item.name == type ? item.value : null
+        return item.name === type ? item.value : null
       }).value
     )
   }, [type])

@@ -7,7 +7,7 @@ import logoImage from '@/assets/gogosign-logo.png'
 
 const Manage = () => {
   const [items] = useState(signedFiles.data) // get data
-  const [listMode, setListMode] = useState('list')
+  // const [listMode, setListMode] = useState('list')
   const [manageMode, setManageMode] = useState('file')
 
   const handleManageModeClick = (event) => {
@@ -32,7 +32,8 @@ const Manage = () => {
 							transition duration-300`}
               onClick={() => {
                 handleManageModeClick('file')
-              }}>
+              }}
+            >
               文件
             </div>
             <div
@@ -42,7 +43,8 @@ const Manage = () => {
 							transition duration-300`}
               onClick={() => {
                 handleManageModeClick('sign')
-              }}>
+              }}
+            >
               簽名
             </div>
           </div>

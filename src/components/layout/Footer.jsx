@@ -10,13 +10,25 @@ const Footer = () => (
       </div>
       <div className="flex">
         <span className="mr-2">聯絡我們</span>
-        <a href="https://github.com/jon111rock" target="_blank">
+        <a
+          href="https://github.com/jon111rock"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Icon type="github" />
         </a>
-        <a href="https://github.com/Louise-Huang" target="_blank">
+        <a
+          href="https://github.com/Louise-Huang"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Icon type="github" />
         </a>
-        <a href="https://github.com/karinhsin" target="_blank">
+        <a
+          href="https://github.com/karinhsin"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Icon type="github" />
         </a>
       </div>
