@@ -1,6 +1,6 @@
 import './style/index.css'
 
-function App() {
+function App () {
   return (
     <h1 className="text-3xl font-bold">
       <p>Home Page</p>
