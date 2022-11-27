@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:prettier/recommended", "standard", "standard-jsx"],
+  "extends": ["plugin:prettier/recommended", "standard", "standard-jsx", "standard-react"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -16,7 +16,8 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "jsx-quotes": ["error", "prefer-double"]
   },
   "settings": {
     "react": {
