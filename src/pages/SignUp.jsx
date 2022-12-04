@@ -11,7 +11,10 @@ const SignUp = () => {
             <img src={logoImage} className="w-1/2" />
           </a>
           <div className="flex justify-center mt-7 mb-7">
-            <a href="/signup" className="w-28 p-2 text-center border-b-2 border-black-500">
+            <a
+              href="/signup"
+              className="w-28 p-2 text-center border-b-2 border-black-500"
+            >
               REGISTER
             </a>
             <a
