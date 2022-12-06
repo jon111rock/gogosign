@@ -4,6 +4,7 @@ import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import ForgotPassword from './pages/ForgotPassword'
 import NotFound from './pages/NotFound'
+import MemberProfile from './pages/MemberProfile'
 
 export default {
   routes: [
@@ -30,6 +31,10 @@ export default {
     {
       path: '*',
       element: <NotFound />
+    },
+    {
+      path: '/profile',
+      element: <MemberProfile />
     }
   ]
 }
