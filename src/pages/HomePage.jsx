@@ -2,18 +2,18 @@ import writing from '@/assets/writing.png'
 import update from '@/assets/update.png'
 import rising from '@/assets/rising.png'
 import email from '@/assets/email.png'
-import Header from '../components/layout/Header'
 import logoImage from '@/assets/gogosign-logo.png'
+import Header from '../components/layout/Header'
 import Icon from '../components/Icon'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="h-screen">
       <Header />
-      <section className="mt-3 mb-5 w-full flex flex-wrap">
+      <section className="mt-3 mb-5 xl:w-4/5 mx-auto flex flex-wrap">
         <div className="w-full flex flex-col mt-14 mx-8 md:mt-20 md:mx-0 md:px-8 lg:mt-20 lg:mx-36 lg:px-8 lg:flex-row lg:text-left p-0 items-center text-center ">
           <div className="lg:w-1/2">
-            <div className="">
+            <div>
               <h1 className="text-2xl my-5 md:text-5xl font-bold">
                 狗狗賽GoGoSign，數位化簽名流程專家
               </h1>
@@ -51,7 +51,7 @@ const HomePage = () => {
         <div className="mx-8 p-0 mt-10 lg:mx-36">
           <div className="flex flex-col md:flex-row items-center">
             <div className="min-h-400 md:w-1/2">
-              <div className="">
+              <div>
                 <img src={update} className="mr-2" />
               </div>
             </div>
@@ -74,14 +74,14 @@ const HomePage = () => {
               </h2>
             </div>
             <div className="min-h-400 md:w-1/2 md:mx-5">
-              <div className="">
+              <div>
                 <img src={rising} className="mr-2" />
               </div>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center">
             <div className="min-h-400 md:w-1/2 md:mx-5">
-              <div className="">
+              <div>
                 <img src={email} className="mr-2" />
               </div>
             </div>
