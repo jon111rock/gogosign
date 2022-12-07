@@ -1,13 +1,11 @@
 import './style/index.css'
+import HomePage from './pages/HomePage'
 
 function App () {
   return (
-    <h1 className="text-3xl font-bold">
-      <p>Home Page</p>
-      <a className="underline" href="/manage">
-        Manage Page
-      </a>
-    </h1>
+    <div>
+      <HomePage />
+    </div>
   )
 }
 
