@@ -1,11 +1,11 @@
 import logoImage from '@/assets/gogosign-logo.png'
-import welcomeImage from '@/assets/welcome.png'
+import loginImage from '@/assets/pigtime.png'
 
-const SignUp = () => {
+const Login = () => {
   return (
     <div className="h-screen bg-gray-100">
       <div className="h-screen w-3/4 mx-auto grid grid-cols-2">
-        <img src={welcomeImage} className="w-2/3 my-auto" />
+        <img src={loginImage} className="w-2/3 my-auto" />
         <div className="w-11/12 h-5/6 my-auto p-12 bg-white rounded-xl shadow-lg flex flex-col items-center">
           <a href="/" className="flex justify-center">
             <img src={logoImage} className="w-1/2" />
@@ -13,23 +13,18 @@ const SignUp = () => {
           <div className="flex justify-center mt-7 mb-7">
             <a
               href="/signup"
-              className="w-28 p-2 text-center border-b-2 border-black-500"
+              className="w-28 p-2 text-center border-b-2 border-gray-300 text-gray-300"
             >
               REGISTER
             </a>
             <a
               href="/login"
-              className="w-28 p-2 text-center border-b-2 border-gray-300 text-gray-300"
+              className="w-28 p-2 text-center border-b-2  border-black-500 text-black-500"
             >
               LOGIN
             </a>
           </div>
           <div className="w-full">
-            <input
-              type="text"
-              className="mb-5 p-3 w-full border border-black-500 rounded-3xl text-sm placeholder-gray-300 focus:outline-none focus:border-yellow-200 focus:ring focus:ring-yellow-200/50"
-              placeholder="User Name"
-            />
             <input
               type="email"
               className="mb-5 p-3 w-full border border-black-500 rounded-3xl text-sm placeholder-gray-300 focus:outline-none focus:border-yellow-200 focus:ring focus:ring-yellow-200/50"
@@ -42,10 +37,15 @@ const SignUp = () => {
             />
             <button
               type="submit"
-              className="w-full p-3 bg-yellow-200 text-black-500 rounded-3xl hover:bg-yellow-400"
+              className="w-full mb-3 p-3 bg-yellow-200 text-black-500 rounded-3xl hover:bg-yellow-400"
             >
-              SIGN UP
+              LOGIN
             </button>
+            <div className="text-center">
+              <a href="/forgot_password" className="text-sm text-gray-300">
+                Forgot password?
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -53,4 +53,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default Login

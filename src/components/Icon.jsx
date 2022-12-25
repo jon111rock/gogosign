@@ -6,6 +6,7 @@ import downloadIcon from '@/assets/icons/download-icon.svg'
 import shareIcon from '@/assets/icons/share-icon.svg'
 import editIcon from '@/assets/icons/edit-icon.svg'
 import crossIcon from '@/assets/icons/cross-icon.svg'
+import githubIcon from '@/assets/icons/github-icon.svg'
 
 const icons = [
   {
@@ -31,6 +32,10 @@ const icons = [
   {
     name: 'cross',
     value: crossIcon
+  },
+  {
+    name: 'github',
+    value: githubIcon
   }
 ]
 
@@ -40,7 +45,7 @@ const Icon = ({ type, size = '1', color = 'black' }) => {
   useEffect(() => {
     setIcon(
       icons.find((item) => {
-        return item.name == type ? item.value : null
+        return item.name === type ? item.value : null
       }).value
     )
   }, [type])
