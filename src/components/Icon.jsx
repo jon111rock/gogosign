@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import SVGInject from '@iconfu/svg-inject'
+
 import PropTypes from 'prop-types'
 import listIcon from '@/assets/icons/list-icon.svg'
 import blockListIcon from '@/assets/icons/block-list-icon.svg'
@@ -39,7 +41,12 @@ const icons = [
   }
 ]
 
-const Icon = ({ type, size = '1', color = 'black' }) => {
+const Icon = ({
+  type,
+  size = 'h-8',
+  color = 'text-gray-600',
+  active = false
+}) => {
   const [icon, setIcon] = useState()
 
   useEffect(() => {
@@ -51,7 +58,13 @@ const Icon = ({ type, size = '1', color = 'black' }) => {
   }, [type])
   return (
     <>
-      <img src={icon} className={`h-${size} text-${color} cursor-pointer`} />
+      <img
+        src={icon}
+        className={`${size} ${color} cursor-pointer ${
+          active ? 'text-yellow-500' : ''
+        }`}
+        onLoad={(e) => SVGInject(e.target)}
+      />
     </>
   )
 }
