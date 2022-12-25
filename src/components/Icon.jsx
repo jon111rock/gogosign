@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import SVGInject from '@iconfu/svg-inject'
-
 import PropTypes from 'prop-types'
 import listIcon from '@/assets/icons/list-icon.svg'
 import blockListIcon from '@/assets/icons/block-list-icon.svg'
