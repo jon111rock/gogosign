@@ -15,7 +15,7 @@ const Manage = () => {
   }
 
   return (
-    <div className="h-screen bg-gogosign-light-yellow">
+    <div className="h-screen bg-yellow-100">
       <div className="pt-8 w-3/4 m-auto">
         {/* header */}
         <div className="flex items-center justify-between">
