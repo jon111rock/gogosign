@@ -47,7 +47,7 @@ const Icon = ({
 }) => {
   const ACTIVE_COLOR = 'text-yellow-500'
   const iconComponent = useMemo(() => {
-    return iconList.find((icon) => icon.name === type)?.value || MenuIcon
+    return iconList.find((icon) => icon.name === type)?.value || ''
   }, [type])
 
   const _color = useMemo(() => {
