@@ -41,7 +41,6 @@ const iconList = [
 
 const Icon = ({
   type,
-  size = 'h-8',
   color = 'text-gray-600',
   active = false
 }) => {
