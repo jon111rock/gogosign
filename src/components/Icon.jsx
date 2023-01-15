@@ -39,15 +39,10 @@ const iconList = [
   }
 ]
 
-const Icon = ({
-  type,
-  size = 'h-8',
-  color = 'text-gray-600',
-  active = false
-}) => {
+const Icon = ({ type, color = 'text-gray-600', active = false }) => {
   const ACTIVE_COLOR = 'text-yellow-500'
   const iconComponent = useMemo(() => {
-    return iconList.find((icon) => icon.name === type)?.value || MenuIcon
+    return iconList.find((icon) => icon.name === type)?.value || ''
   }, [type])
 
   const _color = useMemo(() => {
