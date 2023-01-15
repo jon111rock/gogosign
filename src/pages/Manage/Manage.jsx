@@ -7,7 +7,7 @@ import logoImage from '@/assets/gogosign-logo.png'
 
 const Manage = () => {
   const [items] = useState(signedFiles.data) // get data
-  // const [listMode, setListMode] = useState('list')
+  const [layout, setLayout] = useState('list')
   const [manageMode, setManageMode] = useState('file')
 
   const handleManageModeClick = (event) => {
@@ -56,8 +56,20 @@ const Manage = () => {
             />
             {manageMode === 'file' ? (
               <div className="flex gap-2 items-center">
-                <Icon type="list" />
-                <Icon type="block-list" />
+                <Icon
+                  type="list"
+                  onClick={() => {
+                    setLayout('list')
+                  }}
+                  active={layout === 'list'}
+                />
+                <Icon
+                  type="block-list"
+                  onClick={() => {
+                    setLayout('block')
+                  }}
+                  active={layout === 'block'}
+                />
               </div>
             ) : (
               <></>

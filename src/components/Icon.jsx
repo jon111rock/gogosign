@@ -39,7 +39,12 @@ const iconList = [
   }
 ]
 
-const Icon = ({ type, color = 'text-gray-600', active = false }) => {
+const Icon = ({
+  type,
+  color = 'text-gray-600',
+  active = false,
+  onClick = () => {}
+}) => {
   const ACTIVE_COLOR = 'text-yellow-500'
   const iconComponent = useMemo(() => {
     return iconList.find((icon) => icon.name === type)?.value || ''
@@ -49,9 +54,18 @@ const Icon = ({ type, color = 'text-gray-600', active = false }) => {
     return active ? ACTIVE_COLOR : color
   }, [color, active])
 
+  const handelClick = () => {
+    onClick()
+  }
+
   return (
     <>
-      <div className={`${_color} cursor-pointer`}>{iconComponent}</div>
+      <div
+        className={`${_color} cursor-pointer transition-all ease-in duration-3000`}
+        onClick={handelClick}
+      >
+        {iconComponent}
+      </div>
     </>
   )
 }
