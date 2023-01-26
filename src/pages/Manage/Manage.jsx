@@ -15,7 +15,7 @@ const Manage = () => {
   }
 
   return (
-    <div className="h-screen bg-yellow-100">
+    <div className="h-screen bg-yellow-100 overflow-auto">
       <div className="pt-8 w-3/4 m-auto">
         {/* header */}
         <div className="flex items-center justify-between">
@@ -78,9 +78,18 @@ const Manage = () => {
         </div>
         <hr />
         {/* files list */}
-        <div className="flex flex-col gap-5 mt-10">
+        {/* <div className="flex flex-col gap-5 mt-10">
           {manageMode === 'file' ? (
-            items.map((item) => <ManageFileCard key={item.id} item={item} />)
+            items.map((item) => <ManageFileCard key={item.id} item={item} type='list' />)
+          ) : (
+            <></>
+          )}
+        </div> */}
+        <div className="grid grid-cols-4 grid-flow-row gap-12 pt-10 pb-10">
+          {manageMode === 'file' ? (
+            items.map((item) => (
+              <ManageFileCard key={item.id} item={item} type="block" />
+            ))
           ) : (
             <></>
           )}
