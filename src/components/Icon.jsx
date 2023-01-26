@@ -1,69 +1,57 @@
-import { useEffect, useState } from 'react'
-import SVGInject from '@iconfu/svg-inject'
+import { useMemo } from 'react'
 import PropTypes from 'prop-types'
-import listIcon from '@/assets/icons/list-icon.svg'
-import blockListIcon from '@/assets/icons/block-list-icon.svg'
-import downloadIcon from '@/assets/icons/download-icon.svg'
-import shareIcon from '@/assets/icons/share-icon.svg'
-import editIcon from '@/assets/icons/edit-icon.svg'
-import crossIcon from '@/assets/icons/cross-icon.svg'
-import githubIcon from '@/assets/icons/github-icon.svg'
+import GridViewIcon from '@mui/icons-material/GridView'
+import DownloadIcon from '@mui/icons-material/Download'
+import ShareIcon from '@mui/icons-material/Share'
+import EditIcon from '@mui/icons-material/Edit'
+import CloseIcon from '@mui/icons-material/Close'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import MenuIcon from '@mui/icons-material/Menu'
 
-const icons = [
+const iconList = [
   {
     name: 'list',
-    value: listIcon
+    value: <MenuIcon />
   },
   {
     name: 'block-list',
-    value: blockListIcon
+    value: <GridViewIcon />
   },
   {
     name: 'download',
-    value: downloadIcon
+    value: <DownloadIcon />
   },
   {
     name: 'share',
-    value: shareIcon
+    value: <ShareIcon />
   },
   {
     name: 'edit',
-    value: editIcon
+    value: <EditIcon />
   },
   {
     name: 'cross',
-    value: crossIcon
+    value: <CloseIcon />
   },
   {
     name: 'github',
-    value: githubIcon
+    value: <GitHubIcon />
   }
 ]
 
-const Icon = ({
-  type,
-  size = 'h-8',
-  color = 'text-gray-600',
-  active = false
-}) => {
-  const [icon, setIcon] = useState()
-
-  useEffect(() => {
-    setIcon(
-      icons.find((item) => {
-        return item.name === type ? item.value : null
-      }).value
-    )
+const Icon = ({ type, color = 'text-gray-600', active = false }) => {
+  const ACTIVE_COLOR = 'text-yellow-500'
+  const iconComponent = useMemo(() => {
+    return iconList.find((icon) => icon.name === type)?.value || ''
   }, [type])
+
+  const _color = useMemo(() => {
+    return active ? ACTIVE_COLOR : color
+  }, [color, active])
+
   return (
     <>
-      <img
-        src={icon}
-        className={`${size} ${color} cursor-pointer ${
-          active ? 'text-yellow-500' : ''
-        }`}
-        onLoad={(e) => SVGInject(e.target)}
-      />
+      <div className={`${_color} cursor-pointer`}>{iconComponent}</div>
     </>
   )
 }
