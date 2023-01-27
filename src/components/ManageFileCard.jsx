@@ -23,9 +23,9 @@ const ManageFileCard = ({ item = {}, type = 'list' }) => {
       ) : (
         <div className="w-full px-12">
           <img className=" h-[365px] bg-white" src="/" />
-          <div className="grid grid-cols-[0.9fr_0.1fr] place-items-center">
-            <div>{item.name}</div>
-            <div>:</div>
+          <div className="grid grid-cols-[0.9fr_0.1fr] place-items-center mt-1">
+            <div className="text-gray-500">{item.name}</div>
+            <Icon type="moreVertIcon" />
           </div>
         </div>
       )}

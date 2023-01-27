@@ -7,6 +7,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import CloseIcon from '@mui/icons-material/Close'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import MenuIcon from '@mui/icons-material/Menu'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 
 const iconList = [
   {
@@ -36,6 +37,10 @@ const iconList = [
   {
     name: 'github',
     value: <GitHubIcon />
+  },
+  {
+    name: 'moreVertIcon',
+    value: <MoreVertIcon />
   }
 ]
 
