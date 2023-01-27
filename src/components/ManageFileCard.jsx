@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Icon from './Icon'
+import DropDown from './DropDown'
 
 const ManageFileCard = ({ item = {}, type = 'list' }) => {
   return (
@@ -25,7 +26,16 @@ const ManageFileCard = ({ item = {}, type = 'list' }) => {
           <img className=" h-[365px] bg-white" src="/" />
           <div className="grid grid-cols-[0.9fr_0.1fr] place-items-center mt-1">
             <div className="text-gray-500">{item.name}</div>
-            <Icon type="moreVertIcon" />
+            {/* TODO: DropDown */}
+            <DropDown
+              iconType="moreVertIcon"
+              items={[
+                {
+                  name: 'test 1',
+                  iconType: 'list'
+                }
+              ]}
+            />
           </div>
         </div>
       )}
