@@ -77,23 +77,24 @@ const Manage = () => {
           </div>
         </div>
         <hr />
-        {/* files list */}
-        {/* <div className="flex flex-col gap-5 mt-10">
-          {manageMode === 'file' ? (
-            items.map((item) => <ManageFileCard key={item.id} item={item} type='list' />)
+        {/* files content */}
+        {manageMode === 'file' ? (
+          layout === 'list' ? (
+            <div className="flex flex-col gap-5 mt-10">
+              {items.map((item) => (
+                <ManageFileCard key={item.id} item={item} type="list" />
+              ))}
+            </div>
           ) : (
-            <></>
-          )}
-        </div> */}
-        <div className="grid grid-cols-4 grid-flow-row gap-12 pt-10 pb-10">
-          {manageMode === 'file' ? (
-            items.map((item) => (
-              <ManageFileCard key={item.id} item={item} type="block" />
-            ))
-          ) : (
-            <></>
-          )}
-        </div>
+            <div className="grid grid-cols-4 grid-flow-row place-items-center pt-10 pb-10">
+              {items.map((item) => (
+                <ManageFileCard key={item.id} item={item} type="block" />
+              ))}
+            </div>
+          )
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   )

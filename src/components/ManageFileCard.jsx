@@ -21,10 +21,10 @@ const ManageFileCard = ({ item = {}, type = 'list' }) => {
           </div>
         </div>
       ) : (
-        <div className="w-[80%]">
-          <img className=" bg-white" src="/" />
+        <div className="w-full px-12">
+          <img className=" h-[365px] bg-white" src="/" />
           <div className="grid grid-cols-[0.9fr_0.1fr] place-items-center">
-            <div>test</div>
+            <div>{item.name}</div>
             <div>:</div>
           </div>
         </div>
@@ -37,9 +37,9 @@ ManageFileCard.propTypes = {
   item: PropTypes.shape({
     name: PropTypes.string.isRequired,
     createAt: PropTypes.string.isRequired,
-    fileSize: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
-  }).isRequired
+    fileSize: PropTypes.string.isRequired
+  }).isRequired,
+  type: PropTypes.string.isRequired
 }
 
 export default ManageFileCard
