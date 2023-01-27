@@ -31,8 +31,20 @@ const ManageFileCard = ({ item = {}, type = 'list' }) => {
               iconType="moreVertIcon"
               items={[
                 {
-                  name: 'test 1',
-                  iconType: 'list'
+                  name: '下載',
+                  iconType: 'download'
+                },
+                {
+                  name: '分享',
+                  iconType: 'share'
+                },
+                {
+                  name: '編輯',
+                  iconType: 'edit'
+                },
+                {
+                  name: '刪除',
+                  iconType: 'cross'
                 }
               ]}
             />
