@@ -12,35 +12,35 @@ import MoreVertIcon from '@mui/icons-material/MoreVert'
 const iconList = [
   {
     name: 'list',
-    value: <MenuIcon />
+    value: MenuIcon
   },
   {
     name: 'block-list',
-    value: <GridViewIcon />
+    value: GridViewIcon
   },
   {
     name: 'download',
-    value: <DownloadIcon />
+    value: DownloadIcon
   },
   {
     name: 'share',
-    value: <ShareIcon />
+    value: ShareIcon
   },
   {
     name: 'edit',
-    value: <EditIcon />
+    value: EditIcon
   },
   {
     name: 'cross',
-    value: <CloseIcon />
+    value: CloseIcon
   },
   {
     name: 'github',
-    value: <GitHubIcon />
+    value: GitHubIcon
   },
   {
     name: 'moreVertIcon',
-    value: <MoreVertIcon />
+    value: MoreVertIcon
   }
 ]
 
@@ -48,12 +48,15 @@ const Icon = ({
   type,
   color = 'text-gray-600',
   active = false,
-  onClick = () => {}
+  onClick = () => {},
+  size = 25,
+  cursor = 'pointer'
 }) => {
   const ACTIVE_COLOR = 'text-yellow-500'
   const iconComponent = useMemo(() => {
-    return iconList.find((icon) => icon.name === type)?.value || ''
-  }, [type])
+    const Component = iconList.find((icon) => icon.name === type)?.value || ''
+    return <Component sx={{ fontSize: size }} />
+  }, [type, size])
 
   const _color = useMemo(() => {
     return active ? ACTIVE_COLOR : color
@@ -63,10 +66,14 @@ const Icon = ({
     onClick()
   }
 
+  const _cursorPoint = useMemo(() => {
+    return `cursor-${cursor}`
+  }, [cursor])
+
   return (
     <>
       <div
-        className={`${_color} cursor-pointer transition-all ease-in duration-3000`}
+        className={`${_color} ${_cursorPoint} transition-all ease-in duration-3000`}
         onClick={handelClick}
       >
         {iconComponent}
@@ -77,8 +84,9 @@ const Icon = ({
 
 Icon.propTypes = {
   type: PropTypes.string.isRequired,
-  size: PropTypes.string,
-  color: PropTypes.string
+  size: PropTypes.number,
+  color: PropTypes.string,
+  cusrsorPointer: PropTypes.bool
 }
 
 export default Icon
