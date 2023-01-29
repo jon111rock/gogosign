@@ -62,8 +62,8 @@ const Icon = ({
     return active ? ACTIVE_COLOR : color
   }, [color, active])
 
-  const handelClick = () => {
-    onClick()
+  const handelClick = (e) => {
+    onClick(e)
   }
 
   const _cursorPoint = useMemo(() => {
