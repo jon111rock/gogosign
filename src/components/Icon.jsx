@@ -45,7 +45,7 @@ const iconList = [
  *  color={ tailwind格式顏色，預設"text-gray-600"，例如: "text-gray-400" }
  *  active={ 是否為啟用樣式，預設false，傳入true的顏色改為text-yellow-500，false為color所傳入的顏色 }
  *  size={ 圖標大小，預設為25，傳入number }
- *  cursor={ cursor的類型，預設pointer，例如: "move"、"wait"...... }
+ *  cursor={ cursor的類型，預設cursor-pointer，例如: "cursor-move"、"cursor-wait"...... }
  * />
  */
 
@@ -54,7 +54,7 @@ const Icon = ({
   color = 'text-gray-600',
   active = false,
   size = 25,
-  cursor = 'pointer'
+  cursor = 'cursor-pointer'
 }) => {
   const ACTIVE_COLOR = 'text-yellow-500'
   const iconComponent = useMemo(() => {
@@ -67,7 +67,7 @@ const Icon = ({
   }, [color, active])
 
   const _cursorPoint = useMemo(() => {
-    return `cursor-${cursor}`
+    return cursor
   }, [cursor])
 
   return (
