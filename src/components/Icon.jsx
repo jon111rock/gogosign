@@ -7,6 +7,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import CloseIcon from '@mui/icons-material/Close'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import MenuIcon from '@mui/icons-material/Menu'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 
 const iconList = [
   {
@@ -36,6 +37,10 @@ const iconList = [
   {
     name: 'github',
     value: GitHubIcon
+  },
+  {
+    name: 'moreVertIcon',
+    value: MoreVertIcon
   }
 ]
 
@@ -53,6 +58,7 @@ const Icon = ({
   type,
   color = 'text-gray-600',
   active = false,
+  onClick = () => {},
   size = 25,
   cursor = 'cursor-pointer'
 }) => {
@@ -66,13 +72,22 @@ const Icon = ({
     return active ? ACTIVE_COLOR : color
   }, [color, active])
 
+  const handelClick = (e) => {
+    onClick(e)
+  }
+
   const _cursorPoint = useMemo(() => {
     return cursor
   }, [cursor])
 
   return (
     <>
-      <div className={`${_color} ${_cursorPoint}`}>{iconComponent}</div>
+      <div
+        className={`${_color} ${_cursorPoint} transition-all ease-in duration-3000`}
+        onClick={handelClick}
+      >
+        {iconComponent}
+      </div>
     </>
   )
 }

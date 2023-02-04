@@ -7,7 +7,7 @@ import logoImage from '@/assets/gogosign-logo.png'
 
 const Manage = () => {
   const [items] = useState(signedFiles.data) // get data
-  // const [listMode, setListMode] = useState('list')
+  const [layout, setLayout] = useState('list')
   const [manageMode, setManageMode] = useState('file')
 
   const handleManageModeClick = (event) => {
@@ -15,7 +15,7 @@ const Manage = () => {
   }
 
   return (
-    <div className="h-screen bg-yellow-100">
+    <div className="h-screen bg-yellow-100 overflow-auto">
       <div className="pt-8 w-3/4 m-auto">
         {/* header */}
         <div className="flex items-center justify-between">
@@ -56,8 +56,20 @@ const Manage = () => {
             />
             {manageMode === 'file' ? (
               <div className="flex gap-2 items-center">
-                <Icon type="list" />
-                <Icon type="block-list" />
+                <Icon
+                  type="list"
+                  onClick={() => {
+                    setLayout('list')
+                  }}
+                  active={layout === 'list'}
+                />
+                <Icon
+                  type="block-list"
+                  onClick={() => {
+                    setLayout('block')
+                  }}
+                  active={layout === 'block'}
+                />
               </div>
             ) : (
               <></>
@@ -65,14 +77,24 @@ const Manage = () => {
           </div>
         </div>
         <hr />
-        {/* files list */}
-        <div className="flex flex-col gap-5 mt-10">
-          {manageMode === 'file' ? (
-            items.map((item) => <ManageFileCard key={item.id} item={item} />)
+        {/* files content */}
+        {manageMode === 'file' ? (
+          layout === 'list' ? (
+            <div className="flex flex-col gap-5 mt-10">
+              {items.map((item) => (
+                <ManageFileCard key={item.id} item={item} type="list" />
+              ))}
+            </div>
           ) : (
-            <></>
-          )}
-        </div>
+            <div className="grid grid-cols-4 grid-flow-row place-items-center pt-10 pb-10">
+              {items.map((item) => (
+                <ManageFileCard key={item.id} item={item} type="block" />
+              ))}
+            </div>
+          )
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   )
