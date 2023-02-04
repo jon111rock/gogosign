@@ -39,6 +39,16 @@ const iconList = [
   }
 ]
 
+/**
+ * <Icon
+ *  type={ 圖標類型，例如: "github" }
+ *  color={ tailwind格式顏色，預設"text-gray-600"，例如: "text-gray-400" }
+ *  active={ 是否為啟用樣式，預設false，傳入true的顏色改為text-yellow-500，false為color所傳入的顏色 }
+ *  size={ 圖標大小，預設為25，傳入number }
+ *  cursor={ cursor的類型，預設pointer，例如: "move"、"wait"...... }
+ * />
+ */
+
 const Icon = ({
   type,
   color = 'text-gray-600',
